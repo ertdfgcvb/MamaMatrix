@@ -27,7 +27,7 @@ PGraphics tex;
 byte[]buffer;   
 
 Anim anim;
-int current_anim_id = 0;
+int current_anim_id;
 ArrayList <Class> anim_classes;
 
 void setup() {
@@ -48,10 +48,14 @@ void setup() {
       anim_classes.add(c);
     }
   }
+  
+  // Create the first instance
+  current_anim_id = 0;
+  anim = createInstance(current_anim_id);
 
   // Init serial
-  // serial = scanSerial();      
-  anim = createInstance(current_anim_id);
+  // serial = scanSerial();             // Mac
+  // serial = new Serial(this, "COM3"); // Windows         
 }
 
 void draw() {
