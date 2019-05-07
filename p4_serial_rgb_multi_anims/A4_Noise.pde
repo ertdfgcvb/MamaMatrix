@@ -1,4 +1,9 @@
+/**
+ * A Perlin noise example.
+ */
+
 class A4_Noise extends Anim {
+  
   int step_x, step_y;
   int blur;
   PGraphics target;
@@ -10,16 +15,14 @@ class A4_Noise extends Anim {
   }
 
   void render(PGraphics target, int t) {
-
-    target.beginDraw();
     target.background(0);
     target.noStroke();
 
     float ns = 0.25;
     float nx = t * 0.0002;
     float nz = t * 0.0006;
-    for (int j=0; j<h; j+=step_y) {
-      for (int i=0; i<w; i+=step_x) {
+    for (int j=0; j<target.height; j+=step_y) {
+      for (int i=0; i<target.width; i+=step_x) {
         float n = noise(i/step_x * ns + nx, j/step_y * ns + nx, nz);
         color a = color(0, 0, 255);
         color b = color(255, 0, 0);
@@ -39,15 +42,14 @@ class A4_Noise extends Anim {
     }
 
     // Add the grid (could be better)
-    for (int j=0; j<h; j+=step_y) {
-      for (int i=0; i<w; i+=step_x) {
+    for (int j=0; j<target.height; j+=step_y) {
+      for (int i=0; i<target.width; i+=step_x) {
         float n = noise(i/step_x * ns + nx, j/step_y * ns + nx, nz);
         float l = constrain(map(n, 0.4, 0.7, 0, 255), 50, 255);
         target.fill(l);       
         target.rect(i, j, 1, 1);
       }
     } 
-    target.endDraw();
   }
 
   void keyPressed(int key, int keyCode) {

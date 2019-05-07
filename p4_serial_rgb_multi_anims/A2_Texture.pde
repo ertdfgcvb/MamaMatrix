@@ -1,3 +1,7 @@
+/**
+ * Displaying and animating a loaded image.
+ */
+
 class A2_Texture extends Anim {
 
   PImage tex;

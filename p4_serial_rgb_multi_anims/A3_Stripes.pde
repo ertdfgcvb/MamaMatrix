@@ -1,3 +1,7 @@
+/**
+ * Just some stripes.
+ */
+
 class A3_Stripes extends Anim {
 
   public A3_Stripes() {

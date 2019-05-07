@@ -1,4 +1,8 @@
-class A6_Text_Matrix extends Anim {
+/**
+ * An example with a custom bitmap based font. 
+ */
+ 
+ class A6_Text_Matrix extends Anim {
 
   int gliph_w = 5;
   int gliph_h = 8;

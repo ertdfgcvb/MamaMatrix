@@ -1,3 +1,10 @@
+/**
+ * A text scroller. 
+ * A text file is loaded and all the words are displayed as a long line.
+ * Each new line swaps the foreground with the background color.
+ * Works well with many horizontal tiles.
+ */
+
 class A5_Scroller extends Anim {
 
   PFont f;
@@ -17,7 +24,6 @@ class A5_Scroller extends Anim {
     color col_fg = color(255, 0, 0); // foreground color
     color col_bg = color(0, 0, 0);   // background color
 
-    target.beginDraw();
     target.translate(-pos_offset, 0);
     target.background(col_bg);
     target.textFont(f);
@@ -41,8 +47,6 @@ class A5_Scroller extends Anim {
       target.text(txt, x, 0);
       x += w1 + space_width;
     }
-
-    target.endDraw();
 
     pos_offset += speed;
     float tw1 = target.textWidth(scroller_text[text_offset] + " ");

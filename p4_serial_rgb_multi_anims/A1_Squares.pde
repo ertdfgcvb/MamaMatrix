@@ -1,3 +1,7 @@
+/**
+ * Random squares of different sizes.
+ */
+ 
 class A1_Squares extends Anim {
 
   public A1_Squares() {

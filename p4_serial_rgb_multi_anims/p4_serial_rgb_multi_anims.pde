@@ -8,14 +8,16 @@
  * LEFT/RIGHT : previous/next scene
  * 1-9        : some scenes have a few different modes
  *
- * NOTE: 
+ * Note 
+ * The serial object is disabled for preview purposes. 
+ * Make sure to initialize it properly
  */
 
 import processing.serial.*;
 import java.lang.reflect.*; 
 
-final int NUM_TILES_X   = 2;
-final int NUM_TILES_Y   = 2;
+final int NUM_TILES_X   = 2; // The number of tiles, make sure that the NUM_TILES const
+final int NUM_TILES_Y   = 2; // has the correct value in the slave program
 final int MATRIX_WIDTH  = 64;  
 final int MATRIX_HEIGHT = 32;
 final int NUM_CHANNELS  = 3; 
@@ -37,7 +39,7 @@ void setup() {
   buffer = new byte[buffer_length];
   tex = createGraphics(NUM_TILES_X * MATRIX_WIDTH, NUM_TILES_Y * MATRIX_HEIGHT, JAVA2D);
 
-  // intit anims:  
+  // Intit anims  
   String superClassName = "Anim";
   anim_classes = new ArrayList<Class>();
   for (Class c : this.getClass().getDeclaredClasses()) {
@@ -47,7 +49,7 @@ void setup() {
     }
   }
 
-  // init serial:
+  // Init serial
   // serial = scanSerial();      
   anim = createInstance(current_anim_id);
 }
@@ -151,15 +153,9 @@ Anim createInstance(int id) {
 
 void keyPressed() {
   if (keyCode == RIGHT) {
-    tex.beginDraw();
-    tex.background(0);
-    tex.endDraw();
     current_anim_id = min(current_anim_id + 1, anim_classes.size()-1);
     anim = createInstance(current_anim_id);
   } else if (keyCode == LEFT) {
-    tex.beginDraw();
-    tex.background(0);
-    tex.endDraw();
     current_anim_id = max(current_anim_id - 1, 0);
     anim = createInstance(current_anim_id);
   } 

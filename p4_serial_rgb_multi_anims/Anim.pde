@@ -1,8 +1,10 @@
-class Anim {
+/**
+ * The animation class, meant to be extended.
+ */
+ 
+ class Anim {
   
-  int count = 0;
-  int w = -0;
-  int h = -0;
+  int count = 0; // a counter
   PFont f;
 
   public Anim() {
@@ -12,8 +14,6 @@ class Anim {
   void pre(PGraphics target) {
     target.resetMatrix();
     target.pushStyle();
-    w = target.width;
-    h = target.height;
   }
 
   void render(PGraphics target, int t) {

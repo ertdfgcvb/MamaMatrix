@@ -1,7 +1,11 @@
-class A0_Testcard extends Anim {
-
+/**
+ * A small testcard sketch to help with the configuration.
+ */
+ 
+ class A0_Testcard extends Anim {
+  
   PFont f;
-
+  
   public A0_Testcard() {
     f = loadFont("akz.vlw");
   }
