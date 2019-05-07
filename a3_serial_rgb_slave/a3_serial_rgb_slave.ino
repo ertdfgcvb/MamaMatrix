@@ -17,7 +17,7 @@
 const uint16_t MATRIX_WIDTH   = 64;                         // Number of leds per tile
 const uint16_t MATRIX_HEIGHT  = 32;
 const uint8_t  NUM_CHANNELS   = 3;                          // Let's assume RGB data with a depth of 8 bits (also check the COLOR_DEPTH define)
-const uint16_t NUM_TILES      = 1;                          // The number of chained matrices; 
+const uint16_t NUM_TILES      = 2;                          // The number of chained matrices; 
                                                             // let the software handle the display configuration.
 const uint16_t TOTAL_WIDTH    = MATRIX_WIDTH;               // Total 
 const uint16_t TOTAL_HEIGHT   = MATRIX_HEIGHT * NUM_TILES;  // The matrices are configured as a vertical stack.

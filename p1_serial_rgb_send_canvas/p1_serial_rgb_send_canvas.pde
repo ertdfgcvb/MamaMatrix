@@ -1,4 +1,5 @@
 /**
+ * Example 1.
  * This sketch sends all the pixels of the canvas to the serial port.
  * A helper function to scan all the serial ports for a configured controller is provided. 
  */
