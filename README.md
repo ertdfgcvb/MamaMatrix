@@ -21,33 +21,33 @@ A small framework to facilitate prototyping was developed and used during the wo
 
 All the examples rely on the [SmartMatrix](https://github.com/pixelmatix/SmartMatrix) library for Arduino. The many features of the library are not demonstrated: the libraray comes with an extensive collection of examples.
 
-__a1_single_pixel__\
+__a1_single_pixel__  
 Smallest example program that runs directly on the microcontroller.
 A few LEDs are activated “manually”.
 
-__a2_single_pixel_animated__\
+__a2_single_pixel_animated__  
 Another simple example with some moving LEDs.
 
-__a3_serial_rgb_slave__\
+__a3_serial_rgb_slave__  
 A slave program that forwards incoming pixel data from the serial port to the LED panels.
 The code is unoptimized but runs smooth at 60fps on a single matrix and aroun 30fps on 4 matrices.
 The following Processing examples encodes some pixels from the canvas or a render target.
 
-__p1_serial_rgb_send_canvas__\
+__p1_serial_rgb_send_canvas__  
 A simple example that grabs all the pixels from the Processing canvas and sends them to the sieral port.
 
-__p2_serial_rgb_send_webcam__\
+__p2_serial_rgb_send_webcam__  
 Same as above but with a live webcam.
 
-__p3_serial_rgb_preview__\
+__p3_serial_rgb_preview__  
 A slightly more structured example with a better (aka bigger) preview.
 The slave is always configured to as a stack of matrices. The master program can be configured to slice the canvas accordingly.
 
-__p4_serial_rgb_multi_anims__\
+__p4_serial_rgb_multi_anims__  
 A demonstration running several scenes from a single Processing sketch.
 
-Note:
-- Read the code comments for some additional informations.
+Notes:
+- Additional informations in the code comments.
 - Slave and master programs must be configured manually (an automatic configuration is out of scope but could be implemented).
 
 
