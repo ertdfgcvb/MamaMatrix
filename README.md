@@ -11,11 +11,11 @@ A small framework to facilitate prototyping was developed, presented and used du
 - HUB75 ribbon cable 
 - 5V power supply (3-4A minimum) plus cables
 - Teensy development board 3.5 or 3.6 (a Teensy 3.2 will do but has limited memory)
-- [SmartLed shield](https://docs.pixelmatix.com/SmartMatrix/) (not strictly necessary but handy to quickly connect the micro-controller)
+- [SmartLed shield](https://docs.pixelmatix.com/SmartMatrix/) (not strictly necessary but handy to quickly connect the microcontroller)
 
 # Software requirements
 - [Arduino IDE](https://www.arduino.cc/en/Main/Software) 
-- [Processing](https://www.processing.org/download/)
+- [Processing IDE](https://www.processing.org/download/)
 
 # Examples
 All the examples rely on the [SmartMatrix](https://github.com/pixelmatix/SmartMatrix) library for Arduino.\
