@@ -11,7 +11,7 @@ A small framework to facilitate prototyping was developed, presented and used du
 - HUB75 ribbon cable 
 - 5V power supply (3-4A minimum) plus cables
 - Teensy development board 3.5 or 3.6 (a Teensy 3.2 will do but has limited memory)
-- [SmartLed shield](https://docs.pixelmatix.com/SmartMatrix/) (not strictly necessary but handy to quickly connext the micro-controller)
+- [SmartLed shield](https://docs.pixelmatix.com/SmartMatrix/) (not strictly necessary but handy to quickly connect the micro-controller)
 
 # Software requirements
 - [Arduino IDE](https://www.arduino.cc/en/Main/Software) 
@@ -33,16 +33,16 @@ Another simple example with some moving LEDs.
 __a3_serial_rgb_slave__\
 A slave program that forwards incoming pixel data from the serial port to the LED panels.\
 The code is unoptimized but runs smooth at 60fps on a single matrix and around 30fps on 4 chained matrices.\
-The following Processing examples encodes some pixels from the canvas or a render target.
+The following Processing examples encode some pixels from the canvas (or a render target).
 
 __p1_serial_rgb_send_canvas__\
-A simple example that grabs all the pixels from the Processing canvas and sends them to the sieral port.
+A simple example that grabs all the pixels from the Processing canvas and sends them to the serial port.
 
 __p2_serial_rgb_send_webcam__\
 Same as above but with a live webcam.
 
 __p3_serial_rgb_preview__\
-A slightly more structured example with a better (aka bigger) preview.\
+A slightly more structured example with a better (bigger) preview.\
 The slave is always configured as a stack of matrices. The master program can be configured to slice the canvas according to the desired configuration.
 
 __p4_serial_rgb_multi_anims__\
