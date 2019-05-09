@@ -3,7 +3,7 @@ A few code examples to quickly experiment with LED matrices prepared for a works
 The aim of the workshop was to develop ideas around a physical low resolution display by quickly prototipe and simulate ideas. 
 A small framework to facilitate prototyping was developed and used during the workshop.
 
-[Event presentation](http://one.ca-n.in)
+[Event presentation](http://one.ca-n.in)  
 [Document 1 on CreativeApplications](https://www.creativeapplications.net/can-events/document-1-cans-new-event-seriesexamines-cross-disciplinary-practice/)
 
 # Part list
