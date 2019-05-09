@@ -40,25 +40,21 @@ SMARTMATRIX_ALLOCATE_BUFFERS(matrix, TOTAL_WIDTH, TOTAL_HEIGHT, kRefreshDepth, k
 SMARTMATRIX_ALLOCATE_BACKGROUND_LAYER(bg, TOTAL_WIDTH, TOTAL_HEIGHT, COLOR_DEPTH, kbgOptions);
 
 void setup() {
-
-  Serial.setTimeout(50);
-
   pinMode(LED_BUILTIN, OUTPUT);
   
+  Serial.setTimeout(50);
+
   bg.enableColorCorrection(colorCorrectionEnabled);
   matrix.setBrightness(brightnessValue);
   matrix.addLayer(&bg);
   matrix.begin();
-
 }
 
 
 void loop() {
-
   static uint32_t count = 0;
 
   char chr = Serial.read();
-
   if (chr == '*') {             // Incoming data
     // masterFrame
     uint16_t count = Serial.readBytes((char *)buf, BUFFER_SIZE);
@@ -74,7 +70,7 @@ void loop() {
       bg.swapBuffers(swapBuffersEnabled);     
     }
   } else if (chr == '?') {      // Write out some (parseable) info
-    Serial.print("MAT,");       // 
+    Serial.print("MAT,");        
     Serial.print(MATRIX_WIDTH);
     Serial.print(',');
     Serial.print(MATRIX_HEIGHT);
@@ -101,5 +97,4 @@ void loop() {
   
   digitalWrite(LED_BUILTIN, count / 10 % 2);   // Let's animate the built-in LED as well
   count++;
-
 }

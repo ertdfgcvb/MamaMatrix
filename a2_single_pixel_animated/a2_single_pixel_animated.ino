@@ -25,17 +25,13 @@ SMARTMATRIX_ALLOCATE_BUFFERS(matrix, TOTAL_WIDTH, TOTAL_HEIGHT, kRefreshDepth, k
 SMARTMATRIX_ALLOCATE_BACKGROUND_LAYER(bg, TOTAL_WIDTH, TOTAL_HEIGHT, COLOR_DEPTH, kbgOptions);
 
 void setup() {
-
   pinMode(LED_BUILTIN, OUTPUT);
 
   bg.enableColorCorrection(false);            // bg is the "background" layer
   matrix.addLayer(&bg);
   matrix.setBrightness(255);
   matrix.begin();
-  
 }
-
-
 
 void loop() {
   static uint32_t count = 0;                   // Just a counter

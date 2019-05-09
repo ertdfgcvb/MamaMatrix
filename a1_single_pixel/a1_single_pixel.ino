@@ -25,17 +25,13 @@ SMARTMATRIX_ALLOCATE_BUFFERS(matrix, TOTAL_WIDTH, TOTAL_HEIGHT, kRefreshDepth, k
 SMARTMATRIX_ALLOCATE_BACKGROUND_LAYER(bg, TOTAL_WIDTH, TOTAL_HEIGHT, COLOR_DEPTH, kbgOptions);
 
 void setup() {
- 
   bg.enableColorCorrection(false);    // bg is the "background" layer
   matrix.addLayer(&bg);              
   matrix.setBrightness(255);         
   matrix.begin();
-  
 }
 
-
 void loop() {
-
   bg.fillScreen({0, 0, 0});           // Clear to a color {r,g,b}
   
   bg.drawPixel(10, 10, {255, 0, 0});  // Draw some red pixels
@@ -45,5 +41,4 @@ void loop() {
   bg.drawPixel(12, 12, {255, 0, 0});
 
   bg.swapBuffers();                   // The library offers double buffering
-  
 }
