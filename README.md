@@ -8,7 +8,7 @@ A small framework to facilitate prototyping was developed, presented and used du
 
 # Part list
 - RGB LED matrix 32x64 P5 (P5 means that the LED pitch is 5mm)
-- HUB75 ribbon cable 
+- HUB75 ribbon cable (usually comes with the matrix)
 - 5V power supply (3A minimum), plus cables
 - [Teensy 3.5 or 3.6 development board](https://www.pjrc.com/teensy/) (a Teensy 3.2 will do but has limited memory)
 - [SmartLed shield](https://docs.pixelmatix.com/SmartMatrix/) (not strictly necessary but handy to quickly connect the microcontroller)
