@@ -1,7 +1,7 @@
 # MamaMatrix
-A few code examples to quickly experiment with LED matrices prepared for a workshop at the UAL Creative Computing Institute.
-The aim of the workshop was to develop ideas around a physical low resolution display by quickly prototipe and simulate ideas. 
-A small framework to facilitate prototyping was developed and used during the workshop.
+A few code examples to quickly experiment with LED matrices prepared for a workshop at the UAL Creative Computing Institute.\
+The aim of the workshop was to develop ideas around a physical low resolution display.\
+A small framework to facilitate prototyping was developed, presented and used during the workshop.
 
 [Event presentation](http://one.ca-n.in)\
 [Document 1 on CreativeApplications](https://www.creativeapplications.net/can-events/document-1-cans-new-event-seriesexamines-cross-disciplinary-practice/)
