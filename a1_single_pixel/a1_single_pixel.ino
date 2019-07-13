@@ -4,8 +4,8 @@
  * 
  * For ease of connection a SmartLED Shield is used (but is not strictly necessary):
  * http://docs.pixelmatix.com/SmartMatrix/
- * The library offers many tools (and examples) to display graphics, animations and texts. 
- * 
+ *
+ * The library offers many tools (and examples) to display graphics, animations and texts.  
  * Dependencies (and docs):
  * https://github.com/pixelmatix/SmartMatrix 
  */ 
